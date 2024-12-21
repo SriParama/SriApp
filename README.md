@@ -1,2 +1,2 @@
 # SriApp
-This Application is Used For Clean Architecture with Bloc State Management Technique 
+This Application is used for todo list with using Provider state management
