@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "195052316943",
+    "project_id": "fir-app-938bb",
+    "storage_bucket": "fir-app-938bb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195052316943:android:a1ca27138daa010276767a",
+        "android_client_info": {
+          "package_name": "com.clarisco.clariscoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXJnZn8ASLodl1GGMpiSO49y1B4alYcvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
