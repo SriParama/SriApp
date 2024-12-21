@@ -62,56 +62,60 @@ class _MainNavScreenState extends State<MainNavScreen> {
       },
       child: Scaffold(
         resizeToAvoidBottomInset: true,
+        
         extendBody: true,
         body: Stack(
           children: [
             _screens[_currentIndex],
             Positioned(
-              bottom: 10,
-              left: 30,
-              right: 30,
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: GlobalColors.primaryWhite),
-                padding: const EdgeInsets.all(15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    _buildNavButton(
-                      icon: Icons.add,
-                      label: 'Add Task',
-                      isActive: _currentIndex == 0,
-                      onTap: () {
-                        setState(() {
-                          _currentIndex = 0;
-                        });
-                      },
-                    ),
-                    _buildNavButton(
-                      icon: Icons.home_sharp,
-                      label: '',
-                      isActive: _currentIndex == 1,
-                      onTap: () {
-                        setState(() {
-                          _currentIndex = 1;
-                        });
-                      },
-                    ),
-                    _buildNavButton(
-                      icon: Icons.library_books,
-                      label: 'Library',
-                      isActive: _currentIndex == 2,
-                      onTap: () {
-                        setState(() {
-                          _currentIndex = 2;
-                        });
-                      },
-                    ),
-                  ],
-                ),
-              ),
-            ),
+  bottom: MediaQuery.of(context).viewInsets.bottom > 0
+      ?-100
+      : 10,
+  left: 30,
+  right: 30,
+  child: Container(
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: GlobalColors.primaryWhite),
+    padding: const EdgeInsets.all(15),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        _buildNavButton(
+          icon: Icons.add,
+          label: 'Add Task',
+          isActive: _currentIndex == 0,
+          onTap: () {
+            setState(() {
+              _currentIndex = 0;
+            });
+          },
+        ),
+        _buildNavButton(
+          icon: Icons.home_sharp,
+          label: '',
+          isActive: _currentIndex == 1,
+          onTap: () {
+            setState(() {
+              _currentIndex = 1;
+            });
+          },
+        ),
+        _buildNavButton(
+          icon: Icons.library_books,
+          label: 'Library',
+          isActive: _currentIndex == 2,
+          onTap: () {
+            setState(() {
+              _currentIndex = 2;
+            });
+          },
+        ),
+      ],
+    ),
+  ),
+)
+
           ],
         ),
       ),
